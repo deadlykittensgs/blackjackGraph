@@ -26,6 +26,28 @@ function getCards() {
 function usersHand() {
 let usersCardOne = getCards()
 let usersCardTwo = getCards()
+
+// if (usersCardOne.inclues("ace")){
+
+//   usersCardOne = ace()
+// }
+
+// if (usersCardOne.inclues("King")|| usersCardOne.inclues("Queen")|| usersCardOne.inclues("Jack")){
+
+//   usersCardOne = 10
+// }
+// // ----------------  card two
+// if (usersCardTwo.inclues("ace")){
+
+//   usersCardTwo = ace()
+// }
+
+// if (usersCardTwo.inclues("King")|| usersCardTwo.inclues("Queen")|| usersCardTwo.inclues("Jack")){
+
+//   usersCardTwo = 10
+// }
+
+
 let usersTotal = usersCardOne + usersCardTwo 
 console.log(usersTotal)
 return usersTotal
@@ -48,15 +70,31 @@ function playGame(howManyTimes) {
     let user = dealersHand()
     let dealer = usersHand()
 
-    if (dealer > user) {
-        theDealerWon++
-      
-    }
-    if (dealer < user) {
-        theUserTotal++
-      
+
+    while (user < dealer && user < 22) {
+      user = user + getCards() 
+
     }
     console.log(`dealer wins ${theDealerWon}`)
     console.log(`user wins ${theUserTotal}`)
 }
+if (dealer > user || user > 21 ) {
+  theDealerWon++
+
+}
+if (dealer < user || dealer || 21) {
+  theUserTotal++
+}
+
+}
+
+
+function ace() {
+  if (totalValue + 11 < 22 ) {
+    return 11
+  }
+  if (totalValue + 11 > 22 ) {
+    return 1
+  }
+ 
 }
