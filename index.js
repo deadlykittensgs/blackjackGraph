@@ -27,25 +27,28 @@ function usersHand() {
 let usersCardOne = getCards()
 let usersCardTwo = getCards()
 
-// if (usersCardOne.inclues("ace")){
+/// add a function to turn the strings to a number
 
-//   usersCardOne = ace()
-// }
+console.log(usersCardOne)
+if (usersCardOne.inclues("ace")){
 
-// if (usersCardOne.inclues("King")|| usersCardOne.inclues("Queen")|| usersCardOne.inclues("Jack")){
+  usersCardOne = ace()
+}
 
-//   usersCardOne = 10
-// }
-// // ----------------  card two
-// if (usersCardTwo.inclues("ace")){
+if (usersCardOne.inclues("King")|| usersCardOne.inclues("Queen")|| usersCardOne.inclues("Jack")){
 
-//   usersCardTwo = ace()
-// }
+  usersCardOne = 10
+}
+// ----------------  card two
+if (usersCardTwo.inclues("ace")){
 
-// if (usersCardTwo.inclues("King")|| usersCardTwo.inclues("Queen")|| usersCardTwo.inclues("Jack")){
+  usersCardTwo = ace()
+}
 
-//   usersCardTwo = 10
-// }
+if (usersCardTwo.inclues("King")|| usersCardTwo.inclues("Queen")|| usersCardTwo.inclues("Jack")){
+
+  usersCardTwo = 10
+}
 
 
 let usersTotal = usersCardOne + usersCardTwo 
@@ -75,8 +78,8 @@ function playGame(howManyTimes) {
       user = user + getCards() 
 
     }
-    console.log(`dealer wins ${theDealerWon}`)
-    console.log(`user wins ${theUserTotal}`)
+    // console.log(`dealer wins ${theDealerWon}`)
+    // console.log(`user wins ${theUserTotal}`)
 }
 if (dealer > user || user > 21 ) {
   theDealerWon++
